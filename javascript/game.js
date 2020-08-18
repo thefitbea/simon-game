@@ -44,14 +44,14 @@ $(".btn").click(function() {
 //   $("body").toggle(started);
 // });
 
-function checkAnswer(currentLevel){
-  if (gamePattern[currentLevel]===userClickedPattern[currentLevel]) {
-    if(userClickedPattern.length === gamePattern.length){
-      setTimeout(function(){
-        nextSequence();
-      }, 1000)
-    }
-    else{
+function checkAnswer(currentLevel) {
+    if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
+      if (userClickedPattern.length === gamePattern.length){
+        setTimeout(function () {
+          nextSequence();
+        }, 1000);
+      }
+    } else {
       playSound("wrong");
       $("body").addClass("game-over");
       $("#level-title").text("Game Over, Press Any Key to Restart");
@@ -62,8 +62,8 @@ function checkAnswer(currentLevel){
 
       startOver();
     }
-  }
 }
+
 
 
 
